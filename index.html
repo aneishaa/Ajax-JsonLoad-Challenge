@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            overflow: auto;
+            background-color:hotpink;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid transparent;
+            box-shadow: 10px 10px 20px grey;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        button{
+            display: block;
+            width: 200px;
+            padding: 5px;
+            font-size: 18px;
+            margin: 10px auto;
+            background-color:lavender;
+        }
+        .user{
+            background-color: khaki;
+            padding: 10px;
+            margin: 10px;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        table{
+           border: 1px solid white;
+           width: 100%;  
+        }
+        h2{
+            color:hotpink;
+        }
+    </style>
+    <script>
+        var xhr;
+        document.addEventListener("DOMContentLoaded", function(){
+            xhr = new XMLHttpRequest();
+            xhr.addEventListener("readystatechange", ajaxHandler);
+            document.querySelector("button").addEventListener("click", clickHandler)
+        });
+
+        function clickHandler(){
+           
+            xhr.open("get","data/data.json",false);
+            xhr.send();
+        };
+        function ajaxHandler(evt){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 4 && xhr.status === 200){
+              
+                var users = JSON.parse( xhr.responseText );
+                // document.querySelector(".box").innerHTML = users.data;
+                // document.querySelector(".tr1").innerHTML += "<tr>"+"<td class='user'>"+ "Slno" +"</td>" 
+                //                                             + "<td class='user'>"+ "Name"+" </td>" 
+                //                                             + "<td class='user'>"+ "Quantity"+" </td>" 
+                //                                             + "<td class='user'>"+ "Unit"+" </td>" 
+                //                                             + "<td class='user'>"+ "Department"+" </td>"
+                //                                             + "<td class='user'>"+ "Notes"+" </td>" +  "</br>" + "</tr>";
+
+                   
+                for(var i = 0; i<users.data.length; i++){
+
+                    document.querySelector(".t1").innerHTML += "<td class='user'>"+users.data[i].slno +"</td>" + "<td class='user'>"+users.data[i].name +"</td>" 
+                    +"<td class='user'>"+users.data[i].quantity +"</td>"
+                    + "<td class='user'>"+users.data[i].unit +"</td>"
+                    +"<td class='user'>"+users.data[i].department +"</td>"
+                    +"<td class='user'>"+users.data[i].notes +"</td>"+
+                    "</br>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Mommy Grocery List</h2>
+    <button>Load Data</button>
+
+    <div class="box">
+        <table class = "t1" border="1">
+            <tr class = "tr1">
+               
+                   <td>Slno</td>
+                   <td>Name</td>
+                   <td>Quantity</td>
+                   <td>Unit</td>
+                   <td>Department</td>
+                   <td>Notes</td>
+               
+            <tr>
+                <!-- <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td> -->
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

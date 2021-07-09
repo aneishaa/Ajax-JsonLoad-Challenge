@@ -1,0 +1,84 @@
+{
+    "data" : [
+        {
+            "slno": "01",
+            "name" : "Carrot",
+            "quantity" : "1 kg",
+            "unit": "1",
+            "department":"Veggie",
+            "notes" : "Select good ones"
+        },
+        {
+            "slno": "02",
+            "name" : "Beans",
+            "quantity" : ".5kg",
+            "unit": "1",
+            "department":"Veggie",
+            "notes" : "Select good ones"
+        },
+        {
+            "slno": "03",
+            "name" : "Apples",
+            "quantity" : "1 kg",
+            "unit": "10",
+            "department":"Fruit",
+            "notes" : "Select ripen ones"
+        },
+        {
+            "slno": "04",
+            "name" : "oranges",
+            "quantity" : "1 kg",
+            "unit": "7",
+            "department":"Fruit",
+            "notes" : "Select good ones"
+        },
+        {
+            "slno": "05",
+            "name" : "Eggs",
+            "quantity" : "10 nos",
+            "unit": "10",
+            "department":"Eggs",
+            "notes" : "Select by latest packing date"
+        },
+        {
+            "slno": "06",
+            "name" : "Cabbage",
+            "quantity" : "1 Kg",
+            "unit": "1",
+            "department":"Veggie",
+            "notes" : "Select Fresh ones"
+        },
+        {
+            "slno": "07",
+            "name" : "Potato",
+            "quantity" : "1 Kg",
+            "unit": "10",
+            "department":"Veggie",
+            "notes" : "Select Fresh ones"
+        },
+        {
+            "slno": "08",
+            "name" : "Banana",
+            "quantity" : "1 Kg",
+            "unit": "10",
+            "department":"Veggie",
+            "notes" : "Select Riped ones"
+        },
+        {
+            "slno": "09",
+            "name" : "Chilli",
+            "quantity" : "100 gm",
+            "unit": "15",
+            "department":"Veggie",
+            "notes" : "Select Fresh ones"
+        },
+        {
+            "slno": "10",
+            "name" : "Grapes",
+            "quantity" : "500 gm",
+            "unit": "20",
+            "department":"Fruit",
+            "notes" : "Red grapes"
+        }
+    ]
+}
